@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>multiple-choice quiz form</title>
+</head>
+<body bgcolor=#f4c2c2>
+<center>
+<h1> Quiz </h1>
+</center>
+
+<form name="quizform" method="post" >
+Check the answer to each multiple-choice question:
+<P>1. Who invented JavaScript?<BR>
+<input type="radio" name="question1" value="Douglas Crockford">Douglas Crockford<BR>
+<input type="radio" name="question1" value="Sheryl Sandberg">Sheryl Sandberg<BR>
+<input type="radio" name="question1" value="Brendan Eich">Brendan Eich<BR>
+<input type="radio" name="question1" value="James Gosling">James Gosling<BR>
+</p>
+<P>2. What is the capital of INDIA?<BR>
+<input type="radio" name="question2" value="Delhi">Delhi<BR>
+<input type="radio" name="question2" value="Andhrapradesh">Andhrapradesh<BR>
+<input type="radio" name="question2" value="Tamilnadu">Tamilnadu<BR>
+<input type="radio" name="question2" value="Karnataka">Karnataka<BR>
+</p>
+<P>3. Who is the prime minister of INDIA?<BR>
+<input type="radio" name="question3" value="Indira Gandhi">Indira Gandhi<BR>
+<input type="radio" name="question3" value="Morarji Desai">Morarji Desai<BR>
+<input type="radio" name="question3" value="Narendra Modi">Narendra Modi<BR>
+<input type="radio" name="question3" value="Rajiv Gandhi">Rajiv Gandhi<BR>
+</p>
+<P>4. What is the national game of INDIA?<BR>
+<input type="radio" name="question4" value="Hockey">Hockey<BR>
+<input type="radio" name="question4 " value="Cricket">Cricket<BR>
+<input type="radio" name="question4" value="Badminton">Badminton<BR>
+<input type="radio" name="question4" value="Football">Football<BR>
+</p>
+<p>5. Which tool can you use to ensure code quality?<BR>
+<input type="radio" name="question5" value="Angular">Angular<BR>
+<input type="radio" name="question5" value="jQuery">jQuery<BR>
+<input type="radio" name="question5" value="RequireJS">RequireJS<BR>    
+<input type="radio" name="question5" value="SonarQube">SonarQube<BR>    
+</p>    
+<br>
+<input type="submit" value="Submit" onclick="check()">
+<input type="reset" value="Clear">
+</form>
+<script>
+    function check(){
+        var question1=document.quizform.question1.value;
+        var question2=document.quizform.question2.value;
+        var question3=document.quizform.question3.value;
+        var question4=document.quizform.question4.value;
+        var question5=document.quizform.question5.value;
+        var count=0;
+        if(question1=="Brendan Eich"){
+            count++;
+        }
+        if(question2=="Delhi"){
+            count++;
+        }
+        if(question3=="Narendra Modi"){
+            count++;
+        }
+        if(question4=="Hockey"){
+            count++;
+        }
+        if(question5=="SonarQube"){
+            count++;
+        }
+        if(question1!="Brendan Eich"){
+            alert("correct answer for question1 is Brendan Eich");
+        }
+        if(question2!="Delhi"){
+            alert("correct answer for question2 is Delhi");
+        }
+        if(question3!="Narendra Modi"){
+            alert("correct answer for question3 is Narendra Modi");
+        }
+        if(question4!="Hockey"){
+            alert("correct answer for question4 is Hockey");
+        }
+        if(question5!="SonarQube"){
+            alert("correct answer for question5 is SonarQube");
+        }
+        alert("Result:"+count+"marks");
+    }
+</script>
+</body>
+</html>
+
